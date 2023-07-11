@@ -1,17 +1,13 @@
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
-//    id("ninja.bryansills.android.application")
-    alias(libs.plugins.androidApplication)
+    id("ninja.bryansills.android.application")
 }
 
 android {
     namespace = "ninja.bryansills.conventionplugintest"
-    compileSdk = 33 //
 
     defaultConfig {
         applicationId = "ninja.bryansills.conventionplugintest"
-        targetSdk = 33 //
-        minSdk = 24 //
         versionCode = 1
         versionName = "1.0"
 

@@ -1,10 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.jetbrains.kotlin.jvm")
-    id("java-gradle-plugin")
-    id("maven-publish")
-//    `kotlin-dsl`
+    `kotlin-dsl`
 }
 
 group = "ninja.bryansills.conventionplugintest.buildlogic"
