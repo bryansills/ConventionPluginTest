@@ -4,8 +4,6 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "ninja.bryansills.conventionplugintest.buildlogic"
-
 // Configure the build-logic plugins to target JDK 17
 // This matches the JDK used to build the project, and is not related to what is running on device.
 java {
@@ -19,15 +17,6 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 dependencies {
-    compileOnly(libs.android.gradlePlugin)
-    compileOnly(libs.kotlin.gradlePlugin)
-}
-
-gradlePlugin {
-    plugins {
-        register("androidApplication") {
-            id = "ninja.bryansills.android.application"
-            implementationClass = "AndroidApplicationPlugin"
-        }
-    }
+    implementation(libs.android.gradlePlugin)
+    implementation(libs.kotlin.gradlePlugin)
 }
