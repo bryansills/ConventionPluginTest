@@ -14,6 +14,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Convention Plugin Test"
+rootProject.name = "Convention-Plugin-Test"
 include(":app")
- 
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
