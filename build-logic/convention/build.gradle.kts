@@ -23,6 +23,10 @@ gradlePlugin {
             id = "conventionplugintest.android.application"
             implementationClass = "AndroidApplicationPlugin"
         }
+        register("spotless") {
+            id = "conventionplugintest.spotless"
+            implementationClass = "SpotlessPlugin"
+        }
     }
 }
 
@@ -35,7 +39,8 @@ dependencies {
         dependency.get().run { create("$pluginId:$pluginId.gradle.plugin:$version") }
 
     compileOnly(gradleKotlinDsl())
-    compileOnly(plugin(libs.plugins.android.library))
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
+    compileOnly(libs.spotless.gradlePlugin)
+    compileOnly(plugin(libs.plugins.android.library))
 }
