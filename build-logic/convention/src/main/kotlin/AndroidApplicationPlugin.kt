@@ -1,10 +1,10 @@
 import com.android.build.api.dsl.ApplicationExtension
-import ninja.bryansills.conventionplugintest.buildlogic.dependencies
-import ninja.bryansills.conventionplugintest.buildlogic.findVersionNumber
-import ninja.bryansills.conventionplugintest.buildlogic.javaVersion
-import ninja.bryansills.conventionplugintest.buildlogic.jvmTarget
-import ninja.bryansills.conventionplugintest.buildlogic.libs
-import ninja.bryansills.conventionplugintest.buildlogic.plugins
+import ninja.bryansills.dependencies
+import ninja.bryansills.findVersionNumber
+import ninja.bryansills.javaVersion
+import ninja.bryansills.jvmTarget
+import ninja.bryansills.libs
+import ninja.bryansills.plugins
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

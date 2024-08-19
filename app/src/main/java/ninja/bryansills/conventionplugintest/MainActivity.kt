@@ -1,8 +1,8 @@
 package ninja.bryansills.conventionplugintest
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import java.time.Instant
 
 class MainActivity : AppCompatActivity() {

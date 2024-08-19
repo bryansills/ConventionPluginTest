@@ -1,4 +1,4 @@
-package ninja.bryansills.conventionplugintest.buildlogic
+package ninja.bryansills
 
 import org.gradle.api.Project
 import org.gradle.api.artifacts.dsl.DependencyHandler

@@ -1,3 +1,4 @@
+import org.gradle.accessors.dm.LibrariesForLibs
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -7,13 +8,8 @@ plugins {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-}
-
-kotlin {
-    compilerOptions {
-        jvmTarget = JvmTarget.JVM_17
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(libs.javaVersion.majorVersion))
     }
 }
 
@@ -35,12 +31,20 @@ samWithReceiver.annotation(HasImplicitReceiver::class.qualifiedName!!)
 dependencies {
     implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
 
-    fun DependencyHandler.plugin(dependency: Provider<PluginDependency>) =
-        dependency.get().run { create("$pluginId:$pluginId.gradle.plugin:$version") }
-
     compileOnly(gradleKotlinDsl())
-    compileOnly(libs.android.gradlePlugin)
-    compileOnly(libs.kotlin.gradlePlugin)
-    compileOnly(libs.spotless.gradlePlugin)
+    compileOnly(plugin(libs.plugins.kotlin.android))
+    compileOnly(plugin(libs.plugins.compose.compiler))
+    compileOnly(plugin(libs.plugins.android.application))
     compileOnly(plugin(libs.plugins.android.library))
+    compileOnly(plugin(libs.plugins.spotless))
+    compileOnly(plugin(libs.plugins.ksp))
+    compileOnly(plugin(libs.plugins.hilt.plugin))
+    compileOnly(plugin(libs.plugins.kotlinx.serialization))
+    compileOnly(plugin(libs.plugins.dependency.guard))
 }
+
+fun DependencyHandler.plugin(dependency: Provider<PluginDependency>) =
+    dependency.get().run { create("$pluginId:$pluginId.gradle.plugin:$version") }
+
+private val LibrariesForLibs.javaVersion
+    get(): JavaVersion = JavaVersion.toVersion(versions.java.version.get())

@@ -1,6 +1,6 @@
 import com.diffplug.gradle.spotless.SpotlessExtension
-import ninja.bryansills.conventionplugintest.buildlogic.libs
-import ninja.bryansills.conventionplugintest.buildlogic.plugins
+import ninja.bryansills.libs
+import ninja.bryansills.plugins
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
