@@ -1,5 +1,6 @@
 package ninja.bryansills
 
+import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.gradle.BaseExtension
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
@@ -10,6 +11,9 @@ internal fun Project.configureAndroid() {
         compileSdkVersion(libs.findVersionNumber("compile-sdk"))
         defaultConfig {
             minSdk = libs.findVersionNumber("min-sdk")
+            if (this@android is ApplicationExtension) {
+                targetSdk = libs.findVersionNumber("target-sdk")
+            }
 
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         }

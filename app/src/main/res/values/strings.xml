@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Convention Plugin Test</string>
+    <string name="this_is_some_text">This is some text</string>
 </resources>
