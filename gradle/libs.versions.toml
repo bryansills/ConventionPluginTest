@@ -85,6 +85,7 @@ sqldelight-jvm-driver = { group = "app.cash.sqldelight", name = "sqlite-driver",
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 dependency-analysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependency-analysis" }
 dependency-guard = { id = "com.dropbox.dependency-guard", version.ref = "dependency-guard" }

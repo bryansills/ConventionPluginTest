@@ -29,4 +29,4 @@ internal fun Project.configureAndroid() {
     }
 }
 
-private fun Project.android(action: BaseExtension.() -> Unit) = extensions.configure<BaseExtension>(action)
+internal fun Project.android(action: BaseExtension.() -> Unit) = extensions.configure<BaseExtension>(action)

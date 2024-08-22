@@ -16,5 +16,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Convention-Plugin-Test"
 include(":app")
+include(":compose-lib")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
