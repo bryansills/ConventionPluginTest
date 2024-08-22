@@ -42,6 +42,7 @@ kotlinx-html = "0.11.0"
 okio = "3.9.0"
 androidDesugarJdkLibs = "2.0.4"
 sqldelight = "2.0.2"
+jetbrains-compose = "1.6.11"
 
 [libraries]
 # Core dependencies
@@ -89,6 +90,7 @@ android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 dependency-analysis = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependency-analysis" }
 dependency-guard = { id = "com.dropbox.dependency-guard", version.ref = "dependency-guard" }
+kmp-compose = { id = "org.jetbrains.compose", version.ref = "jetbrains-compose" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }

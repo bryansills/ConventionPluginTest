@@ -6,7 +6,7 @@ plugins {
 kotlin {
     androidLibrary {
         @Suppress("UnstableApiUsage")
-        namespace = "ninja.bryansills.conventionplugintest.compose"
+        namespace = "ninja.bryansills.conventionplugintest.kmp"
         @Suppress("UnstableApiUsage")
         compileSdk = 34
     }

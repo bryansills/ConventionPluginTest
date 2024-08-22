@@ -16,6 +16,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Convention-Plugin-Test"
 include(":app")
-include(":compose-lib")
+include(":kmp-lib")
+include(":kmp-compose-lib")
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")

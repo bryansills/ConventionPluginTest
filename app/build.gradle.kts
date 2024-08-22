@@ -24,7 +24,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":compose-lib"))
+    implementation(project(":kmp-lib"))
+    implementation(project(":kmp-compose-lib"))
     implementation(libs.core.ktx)
     implementation(libs.appcompat)
     implementation(libs.material)
