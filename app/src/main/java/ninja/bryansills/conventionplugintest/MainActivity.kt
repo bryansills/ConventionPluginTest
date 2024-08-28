@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
 //        val lessTextView = findViewById<TextView>(R.id.text_view_less_cool)
 //        lessTextView.text = NumberHolder(300).theNumber.toString()
 
-        setContent { WhatComposable() }
+        setContent {
+            WhatComposable()
+        }
     }
 }

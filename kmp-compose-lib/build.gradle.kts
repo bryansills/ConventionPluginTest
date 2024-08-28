@@ -1,3 +1,4 @@
+@file:Suppress("UnstableApiUsage")
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.kotlin.multiplatform.library)
@@ -7,9 +8,7 @@ plugins {
 
 kotlin {
     androidLibrary {
-        @Suppress("UnstableApiUsage")
-        namespace = "ninja.bryansills.conventionplugintest.kmp"
-        @Suppress("UnstableApiUsage")
+//        namespace = "ninja.bryansills.conventionplugintest.kmp"
         compileSdk = 34
     }
     sourceSets {
@@ -17,6 +16,9 @@ kotlin {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
+
+            implementation(libs.coroutines)
+            implementation(libs.kotlinx.datetime)
         }
     }
 }
